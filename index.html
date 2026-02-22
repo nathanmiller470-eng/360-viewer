@@ -18,28 +18,19 @@
 
 <script>
 pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": "pano.jpg",
-    "autoLoad": true,
+  "type": "equirectangular",
+  "panorama": "pano.jpg",
+  "autoLoad": true,
 
-    "hotSpots": [
-        {
-            "pitch": 5,
-            "yaw": 100,
-            "type": "info",
-            "text": "Brush Heap Mtn"
-        },
-        {
-            "pitch": -10,
-            "yaw": -60,
-            "type": "info",
-            "text": "Sugartree Mtn"
-        }
-    ]
+  // FOV control (all in degrees)
+  "hfov": 70,        // start FOV (smaller = flatter/less “globe”)
+  "minHfov": 50,     // prevent super-wide distortion
+  "maxHfov": 100     // allow some zoom-out, but not crazy
 });
 </script>
 
 </body>
 
 </html>
+
 
